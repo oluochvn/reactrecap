@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Login() {
     const [showPassword, setShowPassword] = useState(false);
@@ -15,7 +16,9 @@ function Login() {
 
             <div className="px-27 py-12">
                 <header>
-                    <h1 className="font-bold tracking-wider">RETANT</h1>
+                    <Link to="/login" className="inline-block font-bold tracking-wider text-black hover:text-black/80">
+                        RETANT
+                    </Link>
                 </header>
 
                 <div className="mt-24 mx-auto max-w-sm">
@@ -76,9 +79,9 @@ function Login() {
 
                     <p className="mt-8 text-center text-sm text-black/60">
                         Don't have an account?{" "}
-                        <a href="/signup" className="font-semibold text-black hover:underline">
+                        <Link to="/signup" className="font-semibold text-black hover:underline">
                             Create account
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </div>

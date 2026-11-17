@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Register() {
     const [showPassword, setShowPassword] = useState(false);
@@ -16,7 +17,9 @@ function Register() {
 
             <div className="px-27 py-12">
                 <header>
-                    <h1 className="font-bold tracking-wider">RETANT</h1>
+                    <Link to="/login" className="inline-block font-bold tracking-wider text-black hover:text-black/80">
+                        RETANT
+                    </Link>
                 </header>
 
                 <div className="mt-16 mx-auto max-w-sm">
@@ -109,12 +112,12 @@ function Register() {
 
                     <p className="mt-7 text-center text-sm text-black/60">
                         Already have an account?{" "}
-                        <a
-                            href="/login"
+                        <Link
+                            to="/login"
                             className="font-semibold text-black hover:underline"
                         >
                             Sign in
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </div>
